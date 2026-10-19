@@ -126,22 +126,30 @@
   }
   .proj:hover{background:var(--acid);padding-left:14px;padding-right:14px}
   .proj:last-child{border-bottom:2px solid var(--line)}
-  .proj .idx{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--muted)}
+  
+  .proj .idx{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--muted);transition:color .18s}
   .proj:hover .idx{color:var(--ink)}
-  .proj h3{font-size:clamp(24px,3.6vw,44px);font-weight:700;letter-spacing:-.03em;line-height:1}
-  .proj .meta{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-top:6px;text-transform:uppercase;letter-spacing:.5px}
+  
+  .proj h3{font-size:clamp(24px,3.6vw,44px);font-weight:700;letter-spacing:-.03em;line-height:1;transition:color .18s}
+  
+  .proj .meta{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-top:6px;text-transform:uppercase;letter-spacing:.5px;transition:color .18s}
   .proj:hover .meta{color:var(--ink)}
+  
   .proj .meta a{border-bottom:1px dashed var(--ink);text-decoration:none;color:var(--ink)}
   .proj .meta a:hover{background:var(--ink);color:var(--acid)}
+  
   .tag{
     font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;
     text-transform:uppercase;letter-spacing:1px;white-space:nowrap;
-    padding:6px 12px;border:2px solid var(--line);
+    padding:6px 12px;border:2px solid var(--line);transition:all .18s;
   }
   .tag.closed{background:var(--ink);color:var(--paper)}
-  .tag.open{background:var(--paper)}
+  .tag.open{background:var(--paper);color:var(--ink)}
+  
+  /* Исправленный ховер для тегов, чтобы не сливались */
   .proj:hover .tag.closed{background:var(--paper);color:var(--ink)}
   .proj:hover .tag.open{background:var(--ink);color:var(--acid)}
+
   @media(max-width:680px){
     .proj{grid-template-columns:40px 1fr;grid-template-areas:"idx title" "idx tag";row-gap:10px}
     .proj .idx{grid-area:idx}
@@ -187,11 +195,12 @@
   .contact-card .platform{
     font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;
     text-transform:uppercase;letter-spacing:2px;color:var(--muted);
+    transition:color .18s;
   }
   .contact-card:hover .platform{color:var(--ink)}
   .contact-card .handle{
     font-size:clamp(22px,3vw,34px);font-weight:700;letter-spacing:-.02em;
-    line-height:1.1;
+    line-height:1.1;color:var(--ink);
   }
   .contact-card .arrow{
     position:absolute;top:22px;right:22px;font-family:'IBM Plex Mono',monospace;
@@ -233,14 +242,20 @@
         <span>paper / purpur / velocity</span><span>·</span>
         <span><b>anti-ddos</b></span><span>·</span>
         <span>tech admin</span><span>·</span>
-        <span><b>tryrise 60+</b></span><span>·</span>
+        <span><b>tryrise 80+</b></span><span>·</span>
+        <span>coolworld 50+</span><span>·</span>
+        <span>primegrief 100+</span><span>·</span>
+        <span>maingrief 40+</span><span>·</span>
         <span>hack.empire</span><span>·</span>
         <span>minecraft infra</span><span>·</span>
         <span><b>exploit research</b></span><span>·</span>
         <span>paper / purpur / velocity</span><span>·</span>
         <span><b>anti-ddos</b></span><span>·</span>
         <span>tech admin</span><span>·</span>
-        <span><b>tryrise 60+</b></span><span>·</span>
+        <span><b>tryrise 80+</b></span><span>·</span>
+        <span>coolworld 50+</span><span>·</span>
+        <span>primegrief 100+</span><span>·</span>
+        <span>maingrief 40+</span><span>·</span>
         <span>hack.empire</span><span>·</span>
       </div>
     </div>
@@ -264,7 +279,7 @@
         <div class="row"><span class="k">handle</span><span class="v">v2raytun</span></div>
         <div class="row"><span class="k">role</span><span class="v">tech admin</span></div>
         <div class="row"><span class="k">focus</span><span class="v">minecraft · security</span></div>
-        <div class="row"><span class="k">peak</span><span class="v acid">60+ online</span></div>
+        <div class="row"><span class="k">peak</span><span class="v acid">80+ online</span></div>
         <div class="row"><span class="k">status</span><span class="v">available</span></div>
       </aside>
     </div>
@@ -274,19 +289,46 @@
 <section class="block" id="projects">
   <div class="shell">
     <div class="kicker rv"><span class="num">01</span> / projects</div>
-    <h2 class="big rv">Проекты, которые я создал.</h2>
+    <h2 class="big rv">Проекты, на которых я стоял.</h2>
 
     <div class="proj rv">
       <div class="idx">[01]</div>
       <div>
         <h3>TryRise</h3>
-        <div class="meta">creator · tech admin · peak 60+ online</div>
+        <div class="meta">creator · tech admin · peak 80+ online</div>
       </div>
       <div class="tag-wrap"><span class="tag closed">closed</span></div>
     </div>
 
     <div class="proj rv">
       <div class="idx">[02]</div>
+      <div>
+        <h3>CoolWorld</h3>
+        <div class="meta">creator · tech admin · peak 50+ online</div>
+      </div>
+      <div class="tag-wrap"><span class="tag open">open</span></div>
+    </div>
+
+    <div class="proj rv">
+      <div class="idx">[03]</div>
+      <div>
+        <h3>PrimeGrief</h3>
+        <div class="meta">tech admin · peak 100+ online</div>
+      </div>
+      <div class="tag-wrap"><span class="tag closed">closed</span></div>
+    </div>
+
+    <div class="proj rv">
+      <div class="idx">[04]</div>
+      <div>
+        <h3>MainGrief</h3>
+        <div class="meta">tech admin · peak 40+ online</div>
+      </div>
+      <div class="tag-wrap"><span class="tag closed">closed</span></div>
+    </div>
+
+    <div class="proj rv">
+      <div class="idx">[05]</div>
       <div>
         <h3>hack.empire</h3>
         <div class="meta">co-founder · organizer · <a href="https://coolworld.su" target="_blank" rel="noopener">coolworld.su ↗</a></div>
@@ -335,7 +377,10 @@
       </div>
       <div class="rv">
         <p>
-          За плечами — <span class="hl">TryRise</span> (60+ онлайн) и
+          За плечами — <span class="hl">TryRise</span> (80+ онлайн),
+          <span class="hl">CoolWorld</span> (50+ онлайн),
+          <span class="hl">PrimeGrief</span> (100+ онлайн),
+          <span class="hl">MainGrief</span> (40+ онлайн) и
           организация <span class="hl">hack.empire</span> (сайт —
           coolworld.su).
         </p>
